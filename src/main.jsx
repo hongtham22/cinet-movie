@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 
 import HomePage from './pages/HomePage/HomePage.jsx';
+import MovieDetail from './pages/MovieDetail/MovieDetail.jsx';
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
         index: true,
         element: <HomePage/>,
 
+      },
+      {
+        path: "/movie/info",
+        element: <MovieDetail/>,
       },
 
 

@@ -23,7 +23,7 @@
     justify-content: space-between;
     padding: 17px 150px;
     background-color: #fff; /* Đảm bảo header có nền để không bị trong suốt */
-    z-index: 1000; /* Đảm bảo header nằm trên các phần tử khác */
+    z-index: 5000; /* Đảm bảo header nằm trên các phần tử khác */
 }
 
 .logo{

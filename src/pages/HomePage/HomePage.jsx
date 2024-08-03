@@ -49,11 +49,6 @@ function HomePage() {
       const dataNewTV = await responseNewTV.json();
       const dataTrendPeople = await responeTrendPeople.json();
       
-
-
-    //   const response = await fetch(url1, options);
-    //   const data = await response.json();
-    
       // console.log(dataUpComing.results);
       setNowUpComing(dataUpComing.results);
       setPopularMovies(dataPopular.results);
@@ -70,12 +65,12 @@ function HomePage() {
       <Banner data={nowUpComing.slice(0,5)}></Banner>
 
       <Content title={"Popular Movies"}
-                content={"Here are some of the most popular movies that our users & viewers enjoy."}
-               data={popularMovies.slice(0,20)}></Content>
+              content={"Here are some of the most popular movies that our users & viewers enjoy."}
+              data={popularMovies.slice(0,20)}></Content>
 
       <Content title={"New releases"}
-          content={"Check out the highly rated TV shows, available at Cinet."}
-          data={newTV.slice(0,20)}></Content>
+              content={"Check out the highly rated TV shows, available at Cinet."}
+              data={newTV.slice(0,20)}></Content>
 
       <People data={trendPeople.slice(0,6)}></People>
 
