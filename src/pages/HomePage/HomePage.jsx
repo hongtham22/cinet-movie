@@ -53,7 +53,8 @@ function HomePage() {
 
     //   const response = await fetch(url1, options);
     //   const data = await response.json();
-      console.log(dataUpComing.results);
+    
+      // console.log(dataUpComing.results);
       setNowUpComing(dataUpComing.results);
       setPopularMovies(dataPopular.results);
       setNewTV(dataNewTV.results);
