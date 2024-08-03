@@ -1,0 +1,110 @@
+.people-container {
+    background-color: var(--bs-blue);
+
+}
+.people-content{
+    padding: 100px 150px;
+    display: flex;
+    gap: 80px;
+
+}
+
+
+.people-content .left{
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Tự động điều chỉnh số cột */
+    row-gap: 30px; 
+    column-gap: 20px; 
+
+}
+
+
+.people-content .img-item {
+    position: relative;
+    width: 250px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+    /* box-shadow: 0 0 10px #707070 ; */
+
+    opacity: 0.9;
+    transition: transform 0.5s ease-in-out;
+
+    
+}
+
+.people-content .img-item img{
+    width: 100%;
+    height: 180px;
+    display: block;
+    object-fit: cover;
+    background-color: #fff;
+    border-radius: 8px;
+
+
+}
+
+.people-content .content-img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 5px;
+    opacity: 0;
+
+
+}
+
+.people-content .name-people {
+    font-size: 13px;
+    font-weight: 500;
+    color: #fff;
+    text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
+    margin: 0;
+
+}
+
+.people-content .img-item:hover {
+    opacity: 1;
+    transform: scale(1.1);
+    transition: transform 0.5s ease-in-out;
+
+}
+
+.people-content .img-item:hover .content-img{
+    opacity: 1;
+}
+
+
+.people-content .right {
+    flex-direction: column;
+    color: #fff;
+    max-width: 400px;
+    display: flex;
+    align-items: flex-start; 
+    justify-content: center;
+    gap:40px;
+
+}
+
+.people-content .right  h1{
+    font-size: 42px;
+    line-height: 1.33;
+    font-weight: 700;
+}
+.people-content .right  p{
+    font-size: 18px;
+    line-height: 1.65em;
+    font-weight: 400;
+}
+
+
+
+
+.btn {
+
+}
+.btn-view{
+
+}

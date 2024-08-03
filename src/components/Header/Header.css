@@ -1,0 +1,119 @@
+/* .header{
+
+    top: 0;
+    left: 0;
+    max-height: 90px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0px 150px;
+    padding: 17px 0px;
+
+} */
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    max-height: 90px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 17px 150px;
+    background-color: #fff; /* Đảm bảo header có nền để không bị trong suốt */
+    z-index: 1000; /* Đảm bảo header nằm trên các phần tử khác */
+}
+
+.logo{
+    background-color: #fff; /* Đảm bảo header có nền để không bị trong suốt */
+    max-width: 110px;
+    width: 100%;
+    height: 34px;
+}
+
+.right-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+h3 {
+    position: relative;
+    color: #000;
+    font-size: 13px;
+    line-height: 1.2;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 10px 0px;
+    margin-right: 48px;
+    cursor: pointer;
+
+}
+
+.right-header h3.active::after,
+.right-header h3:hover::after {
+    height: 3px;
+    /* background: #e3a321; */
+    background: var(--bs-yellow);
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    transition: .33s;
+
+}
+
+.search{
+    display: flex;
+    /* border:#000 solid 1px; */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.7);
+    border-radius: 18px;
+    align-items: center;
+    
+}
+.ip-search{
+    padding: 9px;
+    border:none;
+    border-radius: 18px;
+    outline: none;
+}
+
+.ip-search:focus{
+    opacity: 0.3;
+}
+
+.btn-search {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.search-icon {
+
+    margin: 0px 5px;
+    width: 18px; 
+    height: 18px;
+    fill: #000; 
+    stroke: #000;
+    stroke-width: 0.3;
+    transition: fill 0.3s, stroke 0.3s; /* Thêm transition để thay đổi màu sắc mượt mà */
+}
+
+.search-icon:hover {
+
+    /* fill: #e3a321;  */
+    fill: var(--bs-yellow);
+    stroke: var(--bs-yellow);
+
+    /* fill: #ffcd1f;  */
+    /* stroke: #fff9e3; */
+    stroke-width: 0.5;
+}
+
