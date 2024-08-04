@@ -3,7 +3,6 @@ import Banner from '../../components/Banner/Banner.jsx'
 import './HomePage.css'
 import Content from '../../components/Content/Content.jsx';
 import People from '../../components/Content/People.jsx';
-import Footer from '../../components/Footer/Footer.jsx';
 
 
 
@@ -74,7 +73,6 @@ function HomePage() {
 
       <People data={trendPeople.slice(0,6)}></People>
 
-      <Footer></Footer>
     </div>
     
   )

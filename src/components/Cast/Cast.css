@@ -1,0 +1,134 @@
+.cast {
+    max-width: 75%;
+    width: 100%; 
+}
+
+.cast h2 {
+    margin-bottom: 30px;
+}
+
+.cast .wapper,
+.cast .wapper-recommendation{
+
+    display: flex;
+    gap: 22px;
+    overflow-x: auto;
+    overflow-y: hidden; 
+    white-space: nowrap;
+    padding: 0 10px;
+
+}
+
+
+.cast .wapper .item {
+    margin-bottom: 15px;
+    width: 140px; 
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3) ;
+    
+
+}
+
+.wapper-recommendation img,
+.wapper .item img {
+    width: 140px;
+    object-fit: cover;
+    display: block;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.wapper .cast-content {
+    background-color: #fff;
+    height: 80px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.wapper .cast-content h3 {
+    text-transform: capitalize;
+    margin: 0;
+}
+
+.wapper .cast-name {
+    padding: 10px 10px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.wapper .cast-role {
+    font-size: 13px;
+    font-weight: 400;
+    padding: 0px 10px;
+    white-space: normal; 
+}
+
+.cast .wapper-recommendation::-webkit-scrollbar,
+.cast .wapper::-webkit-scrollbar {
+    height: 10px; 
+}
+
+.cast .wapper-recommendation::-webkit-scrollbar-thumb,
+.cast .wapper::-webkit-scrollbar-thumb {
+    background-color: var(--bs-blue);
+    border-radius: 5px;
+}
+
+.cast .recommendation,
+.cast .trailer-h2 {
+    margin-top: 30px;
+}
+
+.trailer-container{
+    background-color: beige;
+    height: 400px;
+}
+
+.wapper-recommendation .item{
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3) ;
+    width: 250px;
+    transition: transform 0.5s ease-in-out;
+
+}
+
+.wapper-recommendation .item:hover {
+    opacity: 1;
+    transform: scale(1.1);
+    transition: transform 0.5s ease-in-out;
+    
+
+}
+
+
+.wapper-recommendation img{
+    width: 250px;
+
+}
+
+.re-content{
+    width: 100%;
+    margin: 0;
+}
+
+.re-content .re-name{
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: capitalize;
+    margin: 0;
+    padding: 0 8px 8px;
+    
+
+}
+
+.re-content .re-release{
+    font-size: 13px;
+    font-weight: 400;
+    margin: 0;
+    padding: 0 8px 8px;
+    
+
+}
+
