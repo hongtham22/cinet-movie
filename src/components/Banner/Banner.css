@@ -63,11 +63,12 @@
     content: none;
 }
 
-.left h1{
-
-    font-size: 78px;
+.banner .left h1{
+    max-height: 250px;
+    font-size: 70px;
     font-weight: 700;
     line-height: 1.1;
+    text-transform: capitalize;
 }
 
 .left p{

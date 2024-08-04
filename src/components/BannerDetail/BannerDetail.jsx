@@ -40,7 +40,7 @@ function BannerDetail() {
                 </div>
                 <h2 className="count-vote">Vote count: 500</h2>
             </div> */}
-            <VoteInfo></VoteInfo>
+            <VoteInfo point = {7.5}></VoteInfo>
             <h2 className="overview">Overview</h2>
             <p className="overview-content">A young girl, Chihiro, becomes trapped in a strange new world of spirits. When her parents undergo a mysterious transformation, she must call upon the courage she never knew she had to free her family.</p>
             <h3 className="director-name">

@@ -1,11 +1,13 @@
 import { useEffect } from 'react';
 import './VoteInfo.css'
+import PropTypes from 'prop-types';
 
-const VoteInfo = () => {
+
+const VoteInfo = ({point}) => {
     useEffect(() => {
         const canvas = document.getElementById('voteCanvas');
         const ctx = canvas.getContext('2d');
-        const percentage = 85; // 85% for 8.5 rating
+        const percentage = point*10; // 85% for 8.5 rating
         const startAngle = -0.5 * Math.PI;
         const endAngle = (percentage / 100) * 2 * Math.PI + startAngle;
 
@@ -22,21 +24,26 @@ const VoteInfo = () => {
         ctx.lineWidth = 4;
         ctx.strokeStyle = '#50e281'; // Light blue
         ctx.stroke();
-    }, []);
+    });
 
     return (
         <div className="vote-info">
             <div className="point-vote">
                 <div className="circle">
                     <div className="chart">
-                        <canvas id="voteCanvas" width="68" height="68"></canvas>
-                        <h3 className="point-number">8.5</h3>
+                        <canvas id="voteCanvas" width="60" height="60"></canvas>
+                        <h3 className="point-number">{point}
+                             <span className="decimal">/10</span>
+                        </h3>
                     </div>
                 </div>
             </div>
-            <h2 className="count-vote">Vote count: 500</h2>
+            <h2 className="count-vote">Vote count: <span className='overview-content'>500</span></h2>
         </div>
     );
 };
 
+VoteInfo.propTypes = {
+    point: PropTypes.number
+  }
 export default VoteInfo;

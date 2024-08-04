@@ -24,7 +24,7 @@ function Footer() {
             <li className="item">
               <img src={positionIcon} alt="position-icon" />
               <a href="#">
-              43 Raymouth Rd. Baltemoer, London 3910
+              43 Raymouth Rd. Baltemoer, London
               </a>
             </li>
 

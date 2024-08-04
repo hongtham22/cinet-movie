@@ -87,9 +87,11 @@
     font-weight: 550;
 }
 
-.vote-info,
 .overview-content {
     margin-bottom: 30px;
+    font-size: 15px;
+    line-height: 1.64;
+    font-weight: 400;
 }
 
 .banner-detail .director-name{
@@ -102,6 +104,7 @@
 .role{
    font-size: 14px; 
 }
+
 
 /* .vote-info {
     display: flex;

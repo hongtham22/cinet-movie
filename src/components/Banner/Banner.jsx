@@ -43,6 +43,7 @@ const CustomRightArrow = ({ onClick }) => {
 
 
 const Banner = ({data}) => {
+
   return (
     <div className="banner">
       <Carousel 
