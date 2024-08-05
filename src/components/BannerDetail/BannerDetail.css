@@ -1,6 +1,8 @@
 .banner-detail {
     margin-top: 80px;
-    background-image: url('https://image.tmdb.org/t/p/original/m4TUa2ciEWSlk37rOsjiSIvZDXE.jpg');
+    /* background-image: url('https://image.tmdb.org/t/p/original/m4TUa2ciEWSlk37rOsjiSIvZDXE.jpg'); */
+    background-image: var(--background-image);
+    
     width: 100%;
     height: 550px;
     background-repeat: no-repeat;

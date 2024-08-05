@@ -1,7 +1,8 @@
 import './Cast.css'
-import imgCast from '../../assets/img/img-cast.png'
 import imgRe from '../../assets/img/img-re.jpg'
 import YouTube from 'react-youtube';
+import PropTypes from 'prop-types';
+
 
 
 const opts = {
@@ -13,76 +14,26 @@ const opts = {
   },
 };
 
-function Cast() {
+function Cast({cast}) {
   return (
     <div className='cast'>
 
         <h2>Top Billed Cast</h2>
 
         <div className="wapper">
-            <div className="item">
-              <img src={imgCast} alt="imgCast" className='img-cast'/>
+          {cast && cast.length > 0 && cast.map((item) =>(
+            <div
+            key={item.id}
+             className="item">
+              <img src={`${import.meta.env.VITE_IMG_URL}${item.profile_path}`} alt="imgCast" className='img-cast'/>
               <div className="cast-content">
                 <h3 className="cast-name">Rumi Hiiragi</h3>
                 <h3 className="cast-role">Chihiro Ogino / Sen (voice)</h3>
               </div>
             </div>
 
-            <div className="item">
-              <img src={imgCast} alt="imgCast" className='img-cast'/>
-              <div className="cast-content">
-                <h3 className="cast-name">Rumi Hiiragi</h3>
-                <h3 className="cast-role">Chihiro Ogino / Sen (voice)</h3>
-              </div>
-            </div>
-
-            <div className="item">
-              <img src={imgCast} alt="imgCast" className='img-cast'/>
-              <div className="cast-content">
-                <h3 className="cast-name">Rumi Hiiragi</h3>
-                <h3 className="cast-role">Chihiro Ogino / Sen (voice)</h3>
-              </div>
-            </div>
-
-            <div className="item">
-              <img src={imgCast} alt="imgCast" className='img-cast'/>
-              <div className="cast-content">
-                <h3 className="cast-name">Rumi Hiiragi</h3>
-                <h3 className="cast-role">Chihiro Ogino / Sen (voice)</h3>
-              </div>
-            </div>
-
-            <div className="item">
-              <img src={imgCast} alt="imgCast" className='img-cast'/>
-              <div className="cast-content">
-                <h3 className="cast-name">Rumi Hiiragi</h3>
-                <h3 className="cast-role">Chihiro Ogino / Sen (voice)</h3>
-              </div>
-            </div>
-
-            <div className="item">
-              <img src={imgCast} alt="imgCast" className='img-cast'/>
-              <div className="cast-content">
-                <h3 className="cast-name">Rumi Hiiragi</h3>
-                <h3 className="cast-role">Chihiro Ogino / Sen (voice)</h3>
-              </div>
-            </div>
-
-            <div className="item">
-              <img src={imgCast} alt="imgCast" className='img-cast'/>
-              <div className="cast-content">
-                <h3 className="cast-name">Rumi Hiiragi</h3>
-                <h3 className="cast-role">Chihiro Ogino / Sen (voice)</h3>
-              </div>
-            </div>
-
-            <div className="item">
-              <img src={imgCast} alt="imgCast" className='img-cast'/>
-              <div className="cast-content">
-                <h3 className="cast-name">Rumi Hiiragi</h3>
-                <h3 className="cast-role">Chihiro Ogino / Sen (voice)</h3>
-              </div>
-            </div>
+           
+        ) )}
 
         </div>
 
@@ -142,5 +93,9 @@ function Cast() {
     </div>
   )
 }
+
+Cast.propTypes = {
+  cast: PropTypes.array,
+};
 
 export default Cast

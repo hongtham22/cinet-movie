@@ -3,6 +3,7 @@ import Banner from '../../components/Banner/Banner.jsx'
 import './HomePage.css'
 import Content from '../../components/Content/Content.jsx';
 import People from '../../components/Content/People.jsx';
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -13,6 +14,8 @@ function HomePage() {
   const [newTV, setNewTV] = useState([]);
   const [trendPeople, setTrendPeople] = useState([]);
   console.log(nowUpComing.length);
+
+  const navigate = useNavigate();
   
   useEffect(() => {
     const fetchMovies = async () => {
@@ -58,6 +61,11 @@ function HomePage() {
     fetchMovies();
   }, [])
 
+  const handleMovieClick = (id) => {
+    navigate(`/movie/${id}`);
+  };
+
+
 
   return (
     <div>
@@ -65,11 +73,16 @@ function HomePage() {
 
       <Content title={"Popular Movies"}
               content={"Here are some of the most popular movies that our users & viewers enjoy."}
-              data={popularMovies.slice(0,20)}></Content>
+              data={popularMovies.slice(0,20)}
+              onMovieClick={handleMovieClick}>
+
+      </Content>
 
       <Content title={"New releases"}
               content={"Check out the highly rated TV shows, available at Cinet."}
-              data={newTV.slice(0,20)}></Content>
+              data={newTV.slice(0,20)}
+              
+      ></Content>
 
       <People data={trendPeople.slice(0,6)}></People>
 

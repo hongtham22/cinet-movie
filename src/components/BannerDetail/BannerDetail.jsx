@@ -1,17 +1,23 @@
 
-import imgDetail from'../../assets/img/img-detail.jpg'
 import VoteInfo from '../VoteInfo/VoteInfo'
 import './BannerDetail.css'
+import PropTypes from 'prop-types';
 
 
-function BannerDetail() {
+
+function BannerDetail({movie}) {
+    if (!movie) {
+        return <div>Loading...</div>;
+      }
+    const backgroundImageUrl = `${import.meta.env.VITE_FULL_IMG_URL}${movie.backdrop_path}`;
+
   return (
-    <div className="banner-detail">
+    <div className="banner-detail" style={{ '--background-image': `url(${backgroundImageUrl})` }}>
         <div className="left-img">
-            <img src={imgDetail} alt="imgDetail" />
+            <img src={`${import.meta.env.VITE_IMG_URL}${movie.poster_path}`} alt="imgDetail" />
         </div>
         <div className="right-content">
-            <h1 className="name">Spririted Away <span className="publish-year">(2001)</span></h1>
+            <h1 className="name">{movie.title}<span className="publish-year">(2001)</span></h1>
             <ul className="list-info-detail">
                 <li className="publish-date">07/20/2001 <span className="short-origin">(JP)</span></li>
                 <li className="genre">Animation, Family, Fantasy</li>
@@ -53,5 +59,14 @@ function BannerDetail() {
     </div>
   )
 }
+
+BannerDetail.propTypes = {
+    movie: PropTypes.shape({
+        title: PropTypes.string,
+        poster_path: PropTypes.string,
+        backdrop_path: PropTypes.string,
+    })
+  }
+  
 
 export default BannerDetail

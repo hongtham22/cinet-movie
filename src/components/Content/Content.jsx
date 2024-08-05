@@ -4,7 +4,7 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import './Content.css';
 
-const Content = ({ title, content, data }) => {
+const Content = ({ title, content, data, onMovieClick }) => {
     const responsive = {
         desktop: {
           breakpoint: { max: 3000, min: 1024 },
@@ -39,7 +39,9 @@ const Content = ({ title, content, data }) => {
         <div
         key={item.id}
         
-        className="img-item">
+        className="img-item"
+        onClick={() => onMovieClick(item.id)}
+        >
           <img src={`${import.meta.env.VITE_IMG_URL}${item.poster_path}`} alt="popular_film" />
           <div className="content-img">
             <p>{item.title || item.original_title || item.name}</p>
@@ -57,6 +59,7 @@ Content.propTypes = {
   title: PropTypes.string,
   content: PropTypes.string,
   data: PropTypes.array,
+  onMovieClick: PropTypes.func,
 };
 
 export default Content;

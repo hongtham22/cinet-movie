@@ -1,6 +1,39 @@
 .detail-info{
-    background-color: #5bc3a0;
-    min-height: 400px;
+    /* background-color: #5bc3a0; */
+    /* min-height: 400px; */
     max-width: 25%;
     width: 100%; 
+    height: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3) ;
+
 }
+
+
+.detail-info a{
+    text-decoration: none;
+    background-color: #fff;
+}
+
+.detail-info h3, a{
+    color: #000;
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    overflow-wrap: break-word;
+
+}
+
+.detail-info p{
+    color: #000;
+    font-weight: 300;
+    overflow-wrap: break-word;
+
+}
+
