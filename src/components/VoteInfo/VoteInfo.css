@@ -55,9 +55,5 @@
 .decimal {
     position: absolute;
     top:12px;
- /* Adjust as needed */
-    font-size: 8px; /* Adjust as needed */
-}
-.vote-info .count-vote h2{
-    font-size: 15px;
+    font-size: 8px; 
 }

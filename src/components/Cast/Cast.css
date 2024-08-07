@@ -23,6 +23,7 @@
 .cast .wapper .item {
     margin-bottom: 15px;
     width: 140px; 
+    /* width: 100%; */
     text-align: center;
     border-radius: 8px;
     box-shadow: 0 0 5px rgba(0,0,0,0.3) ;
@@ -41,9 +42,9 @@
 
 .wapper .cast-content {
     background-color: #fff;
-    height: 80px;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
+    white-space: nowrap;
 }
 
 .wapper .cast-content h3 {
@@ -52,6 +53,9 @@
 }
 
 .wapper .cast-name {
+    white-space: normal;
+    overflow-wrap: break-word; 
+
     padding: 10px 10px;
     font-size: 15px;
     font-weight: 600;
@@ -60,7 +64,7 @@
 .wapper .cast-role {
     font-size: 13px;
     font-weight: 400;
-    padding: 0px 10px;
+    padding: 0px 10px 10px;
     white-space: normal; 
 }
 
@@ -105,6 +109,7 @@
 
 .wapper-recommendation img{
     width: 250px;
+    max-height: 140px;
 
 }
 
@@ -114,6 +119,8 @@
 }
 
 .re-content .re-name{
+    white-space: normal;
+    overflow-wrap: break-word;
     font-size: 16px;
     font-weight: 500;
     text-transform: capitalize;

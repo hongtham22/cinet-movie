@@ -48,6 +48,8 @@
 }
 
 .footer .item a{
+    text-transform: none;
+    font-weight: 350;
     color: #fff;
     text-decoration: none;
 
