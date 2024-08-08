@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 function People({data}) {
   return (
     <div className="people-container">
-        <div className="people-content">
+        <div className="people-banner">
             <div className="left">
             {data && data.length > 0 && data.map((item) =>(
                 <div

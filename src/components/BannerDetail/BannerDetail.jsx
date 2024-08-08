@@ -42,7 +42,9 @@ function BannerDetail({movie, director}) {
             <ul className="list-info-detail">
                 <li className="publish-date">{formattedDate} <span className="short-origin">({movie.origin_country[0]})</span></li>
                 <li className="genre">{genreNames}</li>
+                {movie.runtime &&(
                 <li className="time">{formattedRuntime}</li>
+                )}
 
             </ul>
             {/* <div className="vote-info">
@@ -71,18 +73,15 @@ function BannerDetail({movie, director}) {
             </div>
             <h2 className="overview">Overview</h2>
             <p className="overview-content">{movie.overview}</p>
-            {/* <h3 className="director-name">
-            {director}
-            </h3>
-            <p className="role">Director</p> */}
+
+            {director && (
             <div className="director-info">
-                {director && (
                     <>
                     <h3 className="director-name">{director}</h3>
                     <p className="role">Director</p>
                     </>
-                )}
             </div>
+            )}
 
         </div>
 

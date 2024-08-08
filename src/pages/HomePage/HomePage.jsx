@@ -75,7 +75,7 @@ function HomePage() {
       </Content>
 
       <Content title={"New TV releases"}
-              content={"Check out the highly rated TV shows, available at Cinet."}
+              content={"Check out the highly rated TV series, available at Cinet."}
               data={newTV.slice(0,20)}
               status={'tv'}>
             

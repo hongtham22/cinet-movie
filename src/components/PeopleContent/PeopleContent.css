@@ -1,0 +1,159 @@
+.people-content{
+    max-width: 75%;
+    width: 100%;
+    /* background-color:rgb(131, 206, 241); */
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+}
+
+
+.people-content h1{
+    color: #000;
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 32px;
+    margin: 0;
+    padding: 0;
+    cursor: default;
+}
+
+
+.people-content h2{
+    color: #000;
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 20px;
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 0;
+    cursor: default;
+}
+
+.people-content p{
+    color: #000;
+    font-weight: 400;
+    letter-spacing: 0.6px;
+    overflow-wrap: break-word;
+    /* font-size: 14px; */
+
+}
+
+
+.people-content .known-for{
+    display: flex;
+    gap: 22px;
+    overflow-x: auto;
+    overflow-y: hidden; 
+    white-space: nowrap;
+    padding-right: 10px;
+}
+
+.people-content .known-for .item {
+    margin-bottom: 15px;
+    width: 140px; 
+    /* width: 100%; */
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3) ;
+    
+
+}
+
+.known-for .item img {
+    width: 140px;
+    object-fit: cover;
+    display: block;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.known-for .cast-content {
+    background-color: #fff;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    white-space: nowrap;
+}
+
+.known-for .cast-content h3 {
+    text-transform: capitalize;
+    margin: 0;
+}
+
+.known-for .cast-name {
+    white-space: normal;
+    overflow-wrap: break-word; 
+
+    padding: 10px 10px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+
+
+.people-content .known-for::-webkit-scrollbar {
+    height: 10px; 
+}
+
+.people-content .known-for::-webkit-scrollbar-thumb {
+    background-color: var(--bs-blue);
+    border-radius: 5px;
+}
+
+.people-content .movies-people-container{
+    border: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    /* gap:20px; */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 8px;
+
+
+}
+
+.people-content .movies-people-container .item{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    padding: 10px;
+    /* border-bottom: 1px solid rgba(0,0,0,0.1); */
+    position: relative; /* Để sử dụng phần tử giả */
+
+}
+
+.people-content .movies-people-container .item::after {
+    content: '';
+    position: absolute;
+    left: 8px; /* Khoảng cách từ trái theo padding */
+    right: 8px; /* Khoảng cách từ phải theo padding */
+    bottom: 0;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.people-content .movies-people-container img{
+    width: 40px;
+    height: auto;
+}
+.people-content .movies-people-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.people-content .movies-people-content .left-content {
+    flex-grow: 1; /* Chiếm hết không gian còn lại */
+}
+
+.people-content .movies-people-content .right-content {
+    margin: 0 20px;
+}
+
+.people-content .movies-people-content span{
+    margin-right: 4px ;
+}
+

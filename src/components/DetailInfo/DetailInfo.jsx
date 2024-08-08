@@ -20,10 +20,10 @@ function DetailInfo({movie}) {
 
         </div>
 
-
+      
         <div className="original-tittle">
             <h3>Original Tittle</h3>
-            <p>{movie.original_title}</p>
+            <p>{movie.original_title || movie.original_name}</p>
         </div>
 
         <div className="status">
@@ -38,6 +38,24 @@ function DetailInfo({movie}) {
           <p>{movie.spoken_languages[0].english_name}</p>
         </div>
       )}
+
+      {movie.number_of_episodes && (
+
+        <div className="number-eps">
+          <h3>Number Of Episodes</h3>
+          <p>{movie.number_of_episodes}</p>
+        </div>
+      )}
+
+      {movie.number_of_seasons && (
+
+      <div className="number-season">
+        <h3>Number Of Seasons</h3>
+        <p>{movie.number_of_seasons}</p>
+      </div>
+      )}
+      
+
 
       {movie.production_companies && movie.production_companies[0]?.name && (
         <div className="product-company">
@@ -76,12 +94,15 @@ DetailInfo.propTypes = {
   movie: PropTypes.shape({
     homepage: PropTypes.string,
     original_title: PropTypes.string,
+    original_name: PropTypes.string,
     status: PropTypes.string,
     spoken_languages: PropTypes.array,
     production_companies: PropTypes.array,
     popularity: PropTypes.number,
     budget: PropTypes.number,
     revenue: PropTypes.number,
+    number_of_episodes: PropTypes.number,
+    number_of_seasons: PropTypes.number,
 
   }),
   director: PropTypes.string

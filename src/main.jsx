@@ -11,6 +11,7 @@ import {
 import HomePage from './pages/HomePage/HomePage.jsx';
 import MovieDetail from './pages/MovieDetail/MovieDetail.jsx';
 import TvDetail from './pages/TvDetail/TvDetail.jsx';
+import PeopleDetail from './pages/PeopleDetail/PeopleDetail.jsx';
 
 
 const router = createBrowserRouter([
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
         element: <TvDetail/>,
 
 
+      },
+      {
+        path: '/people/info',
+        element: <PeopleDetail></PeopleDetail>
       },
       
 
