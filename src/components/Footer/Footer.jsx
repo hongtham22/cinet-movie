@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'; 
 import './Footer.css'
 import logoInverse from'../../assets/img/logo-inverse.png'
 import positionIcon from '../../assets/img/position-icon.png'
@@ -11,13 +12,14 @@ function Footer() {
   return (
     <footer className="footer">
       <div className="main-footer">
-        <a href="#">
+        <Link to={`/`} >
             <img
             className="logo-huddle-last"
             src={logoInverse}
             alt="logo-inverse"
             />
-        </a>
+             
+         </Link>
 
         <div className="footer-list">
           <ul className="list">

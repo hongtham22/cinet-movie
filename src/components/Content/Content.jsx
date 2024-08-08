@@ -3,8 +3,10 @@ import PropTypes from 'prop-types';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import './Content.css';
+import { Link } from 'react-router-dom'; 
 
-const Content = ({ title, content, data, onMovieClick }) => {
+
+const Content = ({ title, content, data, status }) => {
     const responsive = {
         desktop: {
           breakpoint: { max: 3000, min: 1024 },
@@ -36,17 +38,15 @@ const Content = ({ title, content, data, onMovieClick }) => {
         infinite={true} 
       >
         {data && data.length > 0 && data.map((item) =>(
-        <div
-        key={item.id}
-        
-        className="img-item"
-        onClick={() => onMovieClick(item.id)}
-        >
+          <Link to={`/${status}/${item.id}`} key={item.id} className="item-link">
+
+        <div className="img-item">
           <img src={`${import.meta.env.VITE_IMG_URL}${item.poster_path}`} alt="popular_film" />
           <div className="content-img">
             <p>{item.title || item.original_title || item.name}</p>
           </div>
         </div>
+        </Link>
 
         ) )}
 
@@ -59,7 +59,7 @@ Content.propTypes = {
   title: PropTypes.string,
   content: PropTypes.string,
   data: PropTypes.array,
-  onMovieClick: PropTypes.func,
+  status: PropTypes.string
 };
 
 export default Content;

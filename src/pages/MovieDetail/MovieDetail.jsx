@@ -11,6 +11,7 @@ function MovieDetail() {
   const [cast, setCast] = useState([]);
   const [recommendationMovie, setRecommendationMovie] = useState([]);
   const [director, setDirector] = useState('');
+  const [trailerMovie, setTrailerMovie] = useState('');
 
   useEffect(() => {
     const fetchMovieData = async () => {
@@ -19,6 +20,7 @@ function MovieDetail() {
         const urlMovieDetail = `https://api.themoviedb.org/3/movie/${id}?language=en-US`;
         const urlCast = `https://api.themoviedb.org/3/movie/${id}/credits?language=en-US`;
         const urlReMovie = `https://api.themoviedb.org/3/movie/${id}/recommendations?language=en-US&page=1`;
+        const urlTrailerMovie = `https://api.themoviedb.org/3/movie/${id}/videos?language=en-US`;
 
         // const url = 'https://api.themoviedb.org/3/movie/129/credits?language=en-US';
    
@@ -65,6 +67,10 @@ function MovieDetail() {
         const dataReMovie = await responeReMovie.json();
         setRecommendationMovie(dataReMovie.results);
 
+        // Trailer Movie
+        const movieKey = await fetch(urlTrailerMovie, options);
+        const data = await movieKey.json();
+        setTrailerMovie(data.results[0].key);
 
       } catch (error) {
         console.log(error);
@@ -83,11 +89,17 @@ function MovieDetail() {
         <BannerDetail movie={movieDetails}
                       director={director}
         ></BannerDetail>
+
         <div className="main-container">
+          
           <Cast cast={cast.slice(0,12)}
                 recommendationMovie={recommendationMovie.slice(0,9)}
+                trailerMovie = {trailerMovie}
+                status={'movie'}
           ></Cast>
-          <DetailInfo></DetailInfo>
+
+          <DetailInfo movie={movieDetails}
+          ></DetailInfo>
 
         </div>
     </div>

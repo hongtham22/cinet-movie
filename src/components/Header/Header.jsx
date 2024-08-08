@@ -1,13 +1,16 @@
 
 import logoDefault from '../../assets/img/logo-default-220x68.png'
 import './Header.css'
-// D:\A MY CODE\MOVIE\cinet-web\src\assets\img\logo-default-220x68.png'
+import { Link } from 'react-router-dom'; 
+
 
 
 function Header() {
   return (
     <div className="header">
-        <img src={logoDefault} alt="logoDefault" className='logo' />
+         <Link to={`/`} >
+             <img src={logoDefault} alt="logoDefault" className='logo' />
+         </Link>
         <div className="right-header">
             <h3 className="active">Home</h3>
             <h3>Movies</h3>

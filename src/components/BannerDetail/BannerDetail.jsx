@@ -12,8 +12,21 @@ function BannerDetail({movie, director}) {
     const backgroundImageUrl = `${import.meta.env.VITE_FULL_IMG_URL}${movie.backdrop_path}`;
     const genreNames = movie.genres.map(genre => genre.name).slice(0, 3).join(', ');
 
-    const releaseDateParts = movie.release_date.split('-');
-    const formattedReleaseDate = `${releaseDateParts[2]}/${releaseDateParts[1]}/${releaseDateParts[0]}`;
+    let formattedDate = '';
+    let year = '';
+
+    if (movie.release_date) {
+      const releaseDateParts = movie.release_date.split('-');
+      year = releaseDateParts[0];
+      formattedDate = `${releaseDateParts[2]}/${releaseDateParts[1]}/${releaseDateParts[0]}`;
+    } else if (movie.first_air_date) {
+      const firstAirPart = movie.first_air_date.split('-');
+      year = firstAirPart[0];
+      formattedDate = `${firstAirPart[2]}/${firstAirPart[1]}/${firstAirPart[0]}`;
+    }
+    
+    // Sử dụng formattedDate trong component của bạn
+
 
     const hours = Math.floor(movie.runtime / 60);
     const minutes = movie.runtime % 60;
@@ -25,9 +38,9 @@ function BannerDetail({movie, director}) {
             <img src={`${import.meta.env.VITE_IMG_URL}${movie.poster_path}`} alt="imgDetail" />
         </div>
         <div className="right-content">
-            <h1 className="name">{movie.title}<span className="publish-year"> ({releaseDateParts[0]})</span></h1>
+            <h1 className="name">{movie.title || movie.name}<span className="publish-year"> ({year})</span></h1>
             <ul className="list-info-detail">
-                <li className="publish-date">{formattedReleaseDate} <span className="short-origin">({movie.origin_country[0]})</span></li>
+                <li className="publish-date">{formattedDate} <span className="short-origin">({movie.origin_country[0]})</span></li>
                 <li className="genre">{genreNames}</li>
                 <li className="time">{formattedRuntime}</li>
 
@@ -89,6 +102,8 @@ BannerDetail.propTypes = {
         runtime: PropTypes.number,
         vote_average: PropTypes.number,
         vote_count: PropTypes.number,
+        first_air_date: PropTypes.string,
+        name: PropTypes.string,
     }),
     director: PropTypes.string
   }
