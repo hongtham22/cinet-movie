@@ -27,9 +27,15 @@
     text-align: center;
     border-radius: 8px;
     box-shadow: 0 0 5px rgba(0,0,0,0.3) ;
+
     
 
 }
+
+/* .wapper .item .img-cast{
+    
+
+} */
 
 .wapper-recommendation img,
 .wapper .item img {
@@ -38,6 +44,8 @@
     display: block;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
+    height:210px;
+   
 }
 
 .wapper .cast-content {

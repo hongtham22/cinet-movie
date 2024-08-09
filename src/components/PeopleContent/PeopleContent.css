@@ -36,9 +36,12 @@
     font-weight: 400;
     letter-spacing: 0.6px;
     overflow-wrap: break-word;
-    /* font-size: 14px; */
-
+    max-height: 200px;
+    height: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
+
 
 
 .people-content .known-for{
@@ -81,13 +84,25 @@
     margin: 0;
 }
 
-.known-for .cast-name {
+.movies-people-content .name,
+.known-for .cast-movie-name {
+    white-space: normal;
+    overflow-wrap: break-word; 
+    padding: 8px 8px;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: capitalize;
+
+}
+
+.known-for .year-movie{
     white-space: normal;
     overflow-wrap: break-word; 
 
-    padding: 10px 10px;
-    font-size: 15px;
-    font-weight: 600;
+    padding:0px 8px 8px;
+    font-size: 12px;
+    font-weight: 400;
+
 }
 
 
@@ -113,6 +128,7 @@
 }
 
 .people-content .movies-people-container .item{
+    background-image: url('/public/placeholder.png');
     width: 100%;
     display: flex;
     flex-direction: row;

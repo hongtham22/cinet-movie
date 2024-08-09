@@ -42,7 +42,7 @@ const router = createBrowserRouter([
 
       },
       {
-        path: '/people/info',
+        path: '/people/:id',
         element: <PeopleDetail></PeopleDetail>
       },
       

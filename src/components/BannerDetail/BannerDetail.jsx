@@ -35,7 +35,7 @@ function BannerDetail({movie, director}) {
   return (
     <div className="banner-detail" style={{ '--background-image': `url(${backgroundImageUrl})` }}>
         <div className="left-img">
-            <img src={`${import.meta.env.VITE_IMG_URL}${movie.poster_path}`} alt="imgDetail" />
+            <img src={`${import.meta.env.VITE_IMG_URL}${movie.poster_path}`} alt="" />
         </div>
         <div className="right-content">
             <h1 className="name">{movie.title || movie.name}<span className="publish-year"> ({year})</span></h1>

@@ -1,6 +1,6 @@
 import './People.css';
 import PropTypes from 'prop-types';
-
+import { Link } from 'react-router-dom'; 
 
 function People({data}) {
   return (
@@ -8,15 +8,14 @@ function People({data}) {
         <div className="people-banner">
             <div className="left">
             {data && data.length > 0 && data.map((item) =>(
-                <div
-                key={item.id}
-                
-                className="img-item">
+              <Link to={`/people/${item.id}`} key={item.id} className="item-link">
+                <div className="img-item">
                         <img src={`${import.meta.env.VITE_IMG_URL}${item.profile_path}`} alt="Spirited Away" />
                         <div className="content-img">
                             <h3 className='name-people'>{item.name}</h3>
                         </div>
                 </div>
+              </Link>
         
                 
             ) )}
