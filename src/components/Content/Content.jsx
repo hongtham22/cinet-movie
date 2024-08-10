@@ -34,7 +34,7 @@ const Content = ({ title, content, data, status }) => {
         responsive={responsive} 
         className="img-container"
         autoPlay={true}
-        autoPlaySpeed={5000}
+        autoPlaySpeed={3000}
         infinite={true} 
       >
         {data && data.length > 0 && data.map((item) =>(

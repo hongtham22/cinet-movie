@@ -27,8 +27,7 @@
     text-align: center;
     border-radius: 8px;
     box-shadow: 0 0 5px rgba(0,0,0,0.3) ;
-
-    
+    transition: transform 0.5s ease-in-out;
 
 }
 
@@ -106,6 +105,7 @@
 
 }
 
+.cast .wapper .item:hover,
 .wapper-recommendation .item:hover {
     opacity: 1;
     transform: scale(1.1);

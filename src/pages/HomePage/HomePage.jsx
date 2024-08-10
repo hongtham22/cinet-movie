@@ -8,6 +8,8 @@ import People from '../../components/Content/People.jsx';
 
 function HomePage() {
 
+
+
   const [nowUpComing, setNowUpComing] = useState([]);
   const [popularMovies, setPopularMovies] = useState([]);
   const [newTV, setNewTV] = useState([]);
@@ -53,7 +55,9 @@ function HomePage() {
       setNowUpComing(dataUpComing.results);
       setPopularMovies(dataPopular.results);
       setNewTV(dataNewTV.results);
-      setTrendPeople(dataTrendPeople.results.filter(person => person.profile_path !== null));
+      setTrendPeople(
+        dataTrendPeople.results.filter(person => person.profile_path && person.gender !== 0)
+      );
     };
 
     fetchMovies();

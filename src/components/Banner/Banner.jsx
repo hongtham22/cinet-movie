@@ -51,7 +51,7 @@ const Banner = ({data}) => {
       <Carousel 
         responsive={responsive}
         autoPlay={true}
-        autoPlaySpeed={8000}
+        autoPlaySpeed={5000}
         infinite={true} 
       >
       {/* <Carousel

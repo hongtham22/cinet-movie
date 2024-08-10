@@ -60,14 +60,26 @@
     text-align: center;
     border-radius: 8px;
     box-shadow: 0 0 5px rgba(0,0,0,0.3) ;
-    
+    transition: transform 0.5s ease-in-out;
+    overflow: hidden;
+}
+
+.people-content .known-for .item:hover {
+    transform: scale(1.1);
+    transition: transform 0.5s ease-in-out;
+    border-radius: 8px;
 
 }
 
+
+
 .known-for .item img {
     width: 140px;
+    min-height: 210px;
+    height: 100%;
     object-fit: cover;
     display: block;
+
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
 }
@@ -162,7 +174,7 @@
 }
 
 .people-content .movies-people-content .left-content {
-    flex-grow: 1; /* Chiếm hết không gian còn lại */
+    flex-grow: 1; 
 }
 
 .people-content .movies-people-content .right-content {
