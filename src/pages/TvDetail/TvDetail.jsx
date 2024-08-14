@@ -33,7 +33,7 @@ function TvDetail() {
                 // Tv Detail
                 const responseTv = await fetch(urlTvDetail, options);
                 const dataTvDetail = await responseTv.json();
-                console.log("TV Details Data:", dataTvDetail);
+                // console.log("TV Details Data:", dataTvDetail);
                 setTvDetails(dataTvDetail);
 
                 // Cast and Recommendations

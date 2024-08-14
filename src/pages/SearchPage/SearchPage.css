@@ -1,0 +1,93 @@
+.search-page{
+    margin-top: 85px;
+    padding: 30px 120px;
+    display: flex;
+    gap:40px;
+}
+
+.search-page .nav-search{
+    max-width: 25%;
+    width: 100%;
+    max-height: 212px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    border: 1px solid #ddd;
+
+
+}
+.search-page .center-search{
+    max-width: 75%;
+    width: 100%;
+
+}
+
+.search-page .nav-search h2{
+    text-align: center;
+    background-color: var(--bs-blue);
+    overflow: hidden;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    color: #fff;
+    padding: 15px 10px;
+
+}
+
+.search-page ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    overflow: hidden;
+}
+
+.search-page li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 20px;
+}
+
+.search-page li .search-tab {
+    flex-grow: 1; 
+    text-align: left; 
+    margin-right: 10px; 
+}
+
+
+
+.search-page .list-nav .active ,
+.search-page li:hover{
+    cursor: pointer;
+    background-color: #ddd;
+}
+
+
+.search-page .list-nav button{
+    border: none;
+    font-weight: 400;
+    font-size: 14px;
+    padding-left: 8px;
+    cursor: pointer;
+
+}
+
+.search-page .list-nav span{
+    padding:2px 8px;
+    background-color: #ddd;
+    border-radius: 10px;
+    margin-right: 5px;
+    
+}
+
+.search-page .list-nav .active button ,
+.search-page .list-nav li:hover button{
+    font-weight: 550;
+    background-color: #ddd;
+
+}
+
+.search-page .list-nav .active span,
+.search-page .list-nav li:hover span{
+    background-color: #fff;
+}

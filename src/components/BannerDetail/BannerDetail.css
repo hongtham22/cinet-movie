@@ -39,7 +39,7 @@
     height: 450px;
     overflow: hidden;
     border-radius: 8px;
-    background-image: url('/public/placeholder.png');
+    background-image: url('/placeholder.png');
     background-position: center;
     background-size: contain;
 

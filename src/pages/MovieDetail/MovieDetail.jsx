@@ -21,8 +21,6 @@ function MovieDetail() {
         const urlCast = `https://api.themoviedb.org/3/movie/${id}/credits?language=en-US`;
         const urlReMovie = `https://api.themoviedb.org/3/movie/${id}/recommendations?language=en-US&page=1`;
         const urlTrailerMovie = `https://api.themoviedb.org/3/movie/${id}/videos?language=en-US`;
-
-        // const url = 'https://api.themoviedb.org/3/movie/129/credits?language=en-US';
    
         const options = {
           method: 'GET',
@@ -37,8 +35,7 @@ function MovieDetail() {
         const dataMovieDetail = await responseMovie.json();
 
         setMovieDetails(dataMovieDetail);
-
-        console.log(dataMovieDetail);
+        // console.log(dataMovieDetail);
 
 
         // Cast
@@ -53,7 +50,7 @@ function MovieDetail() {
         const dataCast = await responeCast.json();
 
         setCast(dataCast.cast || []);
-        console.log(dataCast);
+        // console.log(dataCast);
 
         // director
 

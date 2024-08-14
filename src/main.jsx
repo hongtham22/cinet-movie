@@ -12,6 +12,7 @@ import HomePage from './pages/HomePage/HomePage.jsx';
 import MovieDetail from './pages/MovieDetail/MovieDetail.jsx';
 import TvDetail from './pages/TvDetail/TvDetail.jsx';
 import PeopleDetail from './pages/PeopleDetail/PeopleDetail.jsx';
+import SearchPage from './pages/SearchPage/SearchPage.jsx';
 
 
 const router = createBrowserRouter([
@@ -42,9 +43,16 @@ const router = createBrowserRouter([
 
       },
       {
-        path: '/people/:id',
+        path: '/person/:id',
         element: <PeopleDetail></PeopleDetail>
       },
+
+      {
+        
+        path: '/search',
+        element: <SearchPage></SearchPage>
+      },
+
       
 
 

@@ -30,14 +30,14 @@ function PeopleDetail() {
 
         setPeopleDetails(dataPeopleDetail);
 
-        console.log(dataPeopleDetail);
+        // console.log(dataPeopleDetail);
 
         // People Credit
         
         const responsePeopleCredit = await fetch(urlPeopleCredits, options) ;
         const dataPeopleCredit = await responsePeopleCredit.json();
         setPeopleCredits(dataPeopleCredit.cast || []);
-        console.log(dataPeopleCredit);
+        // console.log(dataPeopleCredit);
         
       } catch (error) {
         console.log(error);

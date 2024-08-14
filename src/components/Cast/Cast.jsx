@@ -26,7 +26,7 @@ function Cast({ cast, recommendationMovie, trailerMovie, status}) {
       <h2>Top Billed Cast</h2>
       <div className="wapper">
         {cast && cast.length > 0 && cast.map((item) => (
-          <Link to={`/people/${item.id}`} key={item.id} className="item-link">
+          <Link to={`/person/${item.id}`} key={item.id} className="item-link">
             <div className="item">
               <img
                 src={`${import.meta.env.VITE_IMG_URL}${item.profile_path}`}

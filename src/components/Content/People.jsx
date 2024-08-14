@@ -8,7 +8,7 @@ function People({data}) {
         <div className="people-banner">
             <div className="left">
             {data && data.length > 0 && data.map((item) =>(
-              <Link to={`/people/${item.id}`} key={item.id} className="item-link">
+              <Link to={`/person/${item.id}`} key={item.id} className="item-link">
                 <div className="img-item">
                         <img src={`${import.meta.env.VITE_IMG_URL}${item.profile_path}`} alt="Spirited Away" />
                         <div className="content-img">

@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './ItemList.css';
+// import placeholder from '../../../public/placeholder.png'
 
 function ItemList({ items, title, formatDate }) {
   const [currentPage, setCurrentPage] = useState(1);
@@ -32,11 +33,11 @@ function ItemList({ items, title, formatDate }) {
             className="item-link"
           >
             <div className="item">
-              <img
-                src={`${import.meta.env.VITE_IMG_URL}${item.poster_path}`}
-                alt="img-movies-people"
-                className="img-movies-people"
-              />
+            <img
+            src={`${import.meta.env.VITE_IMG_URL}${item.poster_path || item.profile_path}`}
+            onError={(e) => { e.target.onerror = null; e.target.src = '/public/placeholder.png'; }}
+            className="img-movies-people"
+          />
               <div className="movies-people-content">
                 <div className="left-content">
                   <h3 className="name">{item.title || item.name}</h3>
@@ -54,7 +55,7 @@ function ItemList({ items, title, formatDate }) {
                         <path d="M12 20.1l5.82 3.682c1.066.675 2.37-.322 2.09-1.584l-1.543-6.926 5.146-4.667c.94-.85.435-2.465-.799-2.567l-6.773-.602L13.29.89a1.38 1.38 0 0 0-2.581 0l-2.65 6.53-6.774.602C.052 8.126-.453 9.74.486 10.59l5.147 4.666-1.542 6.926c-.28 1.262 1.023 2.26 2.09 1.585L12 20.099z"></path>
                       </svg>
                     </span>
-                    {item.vote_average.toFixed(1)}
+                    {item.known_for_department || item.vote_average.toFixed(1)}
                   </p>
                 </div>
                 <div className="right-content">

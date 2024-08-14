@@ -1,8 +1,6 @@
-
 import VoteInfo from '../VoteInfo/VoteInfo'
 import './BannerDetail.css'
 import PropTypes from 'prop-types';
-
 
 
 function BannerDetail({movie, director}) {
@@ -24,8 +22,6 @@ function BannerDetail({movie, director}) {
       year = firstAirPart[0];
       formattedDate = `${firstAirPart[2]}/${firstAirPart[1]}/${firstAirPart[0]}`;
     }
-    
-    // Sử dụng formattedDate trong component của bạn
 
 
     const hours = Math.floor(movie.runtime / 60);
@@ -47,27 +43,8 @@ function BannerDetail({movie, director}) {
                 )}
 
             </ul>
-            {/* <div className="vote-info">
-                <div className="point-vote">
-                    <div className="circle">
-                        <div className="chart">
-
-                        <h3 className="point-number">8.5</h3>
-                        </div>
-                    </div>
-                </div>
-                <h2 className="count-vote">Vote count: 500</h2>
-            </div> */}
             <div className="vote-info">
-                {/* <div className="point-vote">
-                    <div className="circle">
-                        <div className="chart">
-                            <canvas id="voteCanvas" width="68" height="68"></canvas>
-                            <h3 className="point-number">8.5</h3>
-                        </div>
-                    </div>
-                </div> */}
-                 <VoteInfo point = {movie.vote_average.toFixed(1)}></VoteInfo>
+                 <VoteInfo point={parseFloat(movie.vote_average.toFixed(1))}></VoteInfo>
                 <h2 className="count-vote">Vote count: <span className='num-count'>{movie.vote_count}</span></h2>
                 
             </div>

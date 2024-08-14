@@ -31,8 +31,7 @@ const VoteInfo = ({ point }) => {
     ctx.strokeStyle = '#3f6e4f'; // Dark blue
     ctx.stroke();
 
-    // Set stroke color based on the point value
-    const strokeColor = point < 8.0 ? '#f7c32e' : '#50e281'; // Yellow if < 8.0, else light blue
+    const strokeColor = point < 8.0 ? '#f7c32e' : '#50e281';
 
     // Draw the foreground circle (percentage)
     ctx.beginPath();
@@ -41,7 +40,7 @@ const VoteInfo = ({ point }) => {
     ctx.strokeStyle = strokeColor;
     ctx.lineCap = 'round';
     ctx.stroke();
-  }, [point]); // Re-render when point changes
+  }, [point]); 
 
   return (
     <div className="point-vote">
@@ -59,7 +58,7 @@ const VoteInfo = ({ point }) => {
 };
 
 VoteInfo.propTypes = {
-  point: PropTypes.number.isRequired, // Ensure point is a required prop
+  point: PropTypes.number, 
 };
 
 export default VoteInfo;

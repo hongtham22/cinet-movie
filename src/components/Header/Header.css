@@ -80,10 +80,12 @@ h3 {
     border:none;
     border-radius: 18px;
     outline: none;
+    opacity: 0.3;
+
 }
 
 .ip-search:focus{
-    opacity: 0.3;
+    opacity: 1;
 }
 
 .btn-search {

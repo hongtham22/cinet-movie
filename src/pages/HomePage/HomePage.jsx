@@ -5,17 +5,12 @@ import Content from '../../components/Content/Content.jsx';
 import People from '../../components/Content/People.jsx';
 
 
-
 function HomePage() {
-
-
 
   const [nowUpComing, setNowUpComing] = useState([]);
   const [popularMovies, setPopularMovies] = useState([]);
   const [newTV, setNewTV] = useState([]);
   const [trendPeople, setTrendPeople] = useState([]);
-  console.log(nowUpComing.length);
-
   
   useEffect(() => {
     const fetchMovies = async () => {
@@ -26,11 +21,10 @@ function HomePage() {
           Authorization: `Bearer ${import.meta.env.VITE_API_KEY}`
         }
       };
-      // const urlNowPlay = 'https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1';
       const urlUpComing = 'https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=1';
+      
       const urlPopular = 'https://api.themoviedb.org/3/movie/popular?language=en-US&page=1';
 
-      // const urlNewTV = 'https://api.themoviedb.org/3/tv/airing_today?language=en-US&page=1'; 
       const urlNewTV = 'https://api.themoviedb.org/3/trending/tv/day?language=en-US';
       
       const urlTrendPeople = 'https://api.themoviedb.org/3/trending/person/day?language=en-US';

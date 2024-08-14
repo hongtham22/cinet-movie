@@ -2,8 +2,6 @@ import './DetailInfo.css'
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom'; 
 
-
-
 function DetailInfo({movie}) {
   if (!movie) {
     return <div>Loading...</div>;

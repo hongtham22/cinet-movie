@@ -10,7 +10,6 @@
 }
 
 .movies-people-container .item{
-    background-image: url('/public/placeholder.png');
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -32,10 +31,13 @@
     background-color: rgba(0, 0, 0, 0.1);
 }
 
-.movies-people-container img{
+.movies-people-container img {
+    background-position: center;
+    background-size: cover;
     width: 40px;
-    height: auto;
-}
+    height: 60px;
+    border: none; 
+  }
 .movies-people-content{
     display: flex;
     align-items: center;
@@ -53,6 +55,11 @@
 
 .movies-people-content span{
     margin-right: 4px ;
+
+}
+.movies-people-content p{
+    font-weight: 350;
+
 }
 
 .pagination{
