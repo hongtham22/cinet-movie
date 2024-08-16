@@ -2,7 +2,6 @@
     border: 1px solid #ddd;
     display: flex;
     flex-direction: column;
-    /* gap:20px; */
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     border-radius: 8px;
 
@@ -24,8 +23,8 @@
 .movies-people-container .item::after {
     content: '';
     position: absolute;
-    left: 8px; /* Khoảng cách từ trái theo padding */
-    right: 8px; /* Khoảng cách từ phải theo padding */
+    left: 8px; 
+    right: 8px; 
     bottom: 0;
     height: 1px;
     background-color: rgba(0, 0, 0, 0.1);

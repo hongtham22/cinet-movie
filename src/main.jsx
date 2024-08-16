@@ -13,6 +13,7 @@ import MovieDetail from './pages/MovieDetail/MovieDetail.jsx';
 import TvDetail from './pages/TvDetail/TvDetail.jsx';
 import PeopleDetail from './pages/PeopleDetail/PeopleDetail.jsx';
 import SearchPage from './pages/SearchPage/SearchPage.jsx';
+import HeaderItem from './pages/HeaderItem/HeaderItem.jsx';
 
 
 const router = createBrowserRouter([
@@ -25,11 +26,6 @@ const router = createBrowserRouter([
         element: <HomePage/>,
 
       },
-      // {
-      //   path: "/movie/info",
-      //   element: <MovieDetail/>,
-      // },
-
       {
         path: '/movie/:id',
         element: <MovieDetail/>,
@@ -52,17 +48,16 @@ const router = createBrowserRouter([
         path: '/search',
         element: <SearchPage></SearchPage>
       },
+      {
+        path: '/:category/type/:title',
+        element: <HeaderItem />
 
+      },
       
 
 
     ]
   },
-
-  // {
-  //   path: "/test",
-  //   element: <div>Hello world!</div>,
-  // },
 
 ]);
 

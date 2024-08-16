@@ -12,7 +12,6 @@ const VoteInfo = ({ point }) => {
     canvas.width = size;
     canvas.height = size;
 
-    // Adjust styles using CSS
     canvas.style.width = '60px';
     canvas.style.height = '60px';
 

@@ -30,7 +30,7 @@ function Cast({ cast, recommendationMovie, trailerMovie, status}) {
             <div className="item">
               <img
                 src={`${import.meta.env.VITE_IMG_URL}${item.profile_path}`}
-                alt="imgCast"
+                onError={(e) => { e.target.onerror = null; e.target.src = '/public/placeholder.png'; }}
                 className='img-cast'
               />
               <div className="cast-content">
@@ -54,7 +54,7 @@ function Cast({ cast, recommendationMovie, trailerMovie, status}) {
             <div className="item">
               <img
                 src={`${import.meta.env.VITE_IMG_URL}${item.backdrop_path || item.poster_path}`}
-                alt="imgRe"
+                onError={(e) => { e.target.onerror = null; e.target.src = '/public/placeholder.png'; }}
                 className='img-re'
               />
               <div className="re-content">

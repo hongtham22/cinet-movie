@@ -61,7 +61,6 @@ const formatDate = (dateString) => {
                 />
                 <div className="cast-content">
                   <h3 className="cast-movie-name">{item.title || item.name}</h3>
-                  {/* <p className="year-movie">{item.media_type}</p> */}
 
                 </div>
 
@@ -69,18 +68,6 @@ const formatDate = (dateString) => {
             </Link>
           ))}
 
-
-            {/* <div className="item">
-              <img
-                src={imgCast}
-                alt="imgCast"
-                className='img-cast'
-              />
-              <div className="cast-content">
-                <h3 className="cast-movie-name">Euphoriaaaaa hihiiiiii</h3>
-                <p className="year-movie">2024</p>
-              </div>
-            </div> */}
 
         </div>
 

@@ -26,10 +26,11 @@ function People({data}) {
                 <h1>Trending People</h1>
                 <p>Explore the trending stars in the movie industry on Cinet. Stay informed about your favorite actors, directors, and filmmakers who are making waves in the world of cinema. Discover who&apos;s topping the charts and making headlines today.</p>
 
-
-                <button className="btn btn-people">
-                VIEW MORE
-                </button>
+                <Link to="/person/type/popular" className="item-link">
+                  <button className="btn btn-people">
+                  VIEW MORE
+                  </button>
+                </Link>
             </div>
         </div>
 

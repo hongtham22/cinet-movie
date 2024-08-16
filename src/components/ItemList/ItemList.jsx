@@ -2,42 +2,69 @@ import PropTypes from 'prop-types';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './ItemList.css';
-// import placeholder from '../../../public/placeholder.png'
+
 
 function ItemList({ items, title, formatDate }) {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 7;
 
-  // Calculate total pages
   const totalPages = Math.ceil(items.length / itemsPerPage);
 
-  // Get current page items
-  const currentItems = items.slice(
-    (currentPage - 1) * itemsPerPage,
-    currentPage * itemsPerPage
-  );
+  const getCurrentItems = () => {
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const endIndex = Math.min(startIndex + itemsPerPage, items.length);
+    return items.slice(startIndex, endIndex);
+  };
 
   // Handle page change
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);
   };
 
+  // Pagination Logic
+  const getPaginationRange = () => {
+    if (totalPages <= 5) {
+      return [...Array(totalPages).keys()].map(number => number + 1);
+    }
+
+    const range = [];
+    range.push(1);
+
+    if (currentPage > 3) {
+      range.push('...');
+    }
+
+    for (let i = Math.max(2, currentPage - 1); i <= Math.min(totalPages - 1, currentPage + 1); i++) {
+      range.push(i);
+    }
+
+    if (currentPage < totalPages - 2) {
+      range.push('...');
+    }
+
+    if (totalPages > 1) {
+      range.push(totalPages);
+    }
+
+    return range;
+  };
+
   return (
     <div className="movies-people">
       <h2>{title}</h2>
       <div className="movies-people-container">
-        {currentItems.map((item) => (
+        {getCurrentItems().map((item) => (
           <Link
             to={`/${item.media_type}/${item.id}`}
             key={item.id}
             className="item-link"
           >
             <div className="item">
-            <img
-            src={`${import.meta.env.VITE_IMG_URL}${item.poster_path || item.profile_path}`}
-            onError={(e) => { e.target.onerror = null; e.target.src = '/public/placeholder.png'; }}
-            className="img-movies-people"
-          />
+              <img
+                src={`${import.meta.env.VITE_IMG_URL}${item.poster_path || item.profile_path}`}
+                onError={(e) => { e.target.onerror = null; e.target.src = '/public/placeholder.png'; }}
+                className="img-movies-people"
+              />
               <div className="movies-people-content">
                 <div className="left-content">
                   <h3 className="name">{item.title || item.name}</h3>
@@ -73,26 +100,27 @@ function ItemList({ items, title, formatDate }) {
       {totalPages > 1 && (
         <div className="pagination">
           <button
-            onClick={() => handlePageChange(currentPage - 1)}
+            onClick={() => handlePageChange(1)}
             disabled={currentPage === 1}
           >
-            {/* Previous */}
+
             «
           </button>
-          {[...Array(totalPages).keys()].map((number) => (
+          {getPaginationRange().map((page, index) => (
             <button
-              key={number + 1}
-              onClick={() => handlePageChange(number + 1)}
-              className={currentPage === number + 1 ? 'active' : ''}
+              key={index}
+              onClick={() => handlePageChange(page)}
+              className={currentPage === page ? 'active' : ''}
+              disabled={page === '...'}
             >
-              {number + 1}
+              {page}
             </button>
           ))}
           <button
-            onClick={() => handlePageChange(currentPage + 1)}
+            onClick={() => handlePageChange(totalPages)}
             disabled={currentPage === totalPages}
           >
-            {/* Next */}
+
             »
           </button>
         </div>
@@ -102,9 +130,9 @@ function ItemList({ items, title, formatDate }) {
 }
 
 ItemList.propTypes = {
-  items: PropTypes.array.isRequired,
-  title: PropTypes.string.isRequired,
-  formatDate: PropTypes.func.isRequired,
+  items: PropTypes.array,
+  title: PropTypes.string,
+  formatDate: PropTypes.func,
 };
 
 export default ItemList;

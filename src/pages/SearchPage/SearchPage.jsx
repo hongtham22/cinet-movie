@@ -42,7 +42,7 @@ function SearchPage() {
     };
 
     handleSearch();
-  }, [query, selectedMediaType]); // Re-run effect when query or selectedMediaType changes
+  }, [query, selectedMediaType]);
 
   const handleMediaTypeChange = (mediaType) => {
     setSelectedMediaType(mediaType);
@@ -64,19 +64,19 @@ function SearchPage() {
             <button onClick={() => handleMediaTypeChange('movie')} className="search-tab">
               Movies
             </button>
-            <span className='count-item'>10,000</span>
+            {/* <span className='count-item'>10,000</span> */}
           </li>
           <li className={selectedMediaType === 'tv' ? 'active' : ''}>
             <button onClick={() => handleMediaTypeChange('tv')} className="search-tab">
               TV Series
             </button>
-            <span className='count-item'>10,000</span>
+            {/* <span className='count-item'>10,000</span> */}
           </li>
           <li className={selectedMediaType === 'person' ? 'active' : ''}>
             <button onClick={() => handleMediaTypeChange('person')} className="search-tab">
               People
             </button>
-            <span className='count-item'>10,000</span>
+            {/* <span className='count-item'>10,000</span> */}
           </li>
         </ul>
       </div>

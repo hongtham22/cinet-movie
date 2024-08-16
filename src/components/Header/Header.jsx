@@ -1,19 +1,28 @@
-import { useLocation } from "react-router-dom";
+import { useLocation, Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
 import logoDefault from '../../assets/img/logo-default-220x68.png';
 import './Header.css';
 
 function Header() {
   const [searchValue, setSearchValue] = useState('');
+  const navigate = useNavigate(); 
 
   const handleInputChange = (event) => {
     setSearchValue(event.target.value);
   };
 
+  const handleKeyPress = (event) => {
+    if (event.key === 'Enter') {
+      const searchLink = getSearchLink();
+      if (searchLink !== '#') {
+        navigate(searchLink); 
+      }
+    }
+  };
+
   const getSearchLink = () => {
     if (searchValue.trim() === '') {
-      return '#';
+      return '#'; // Return '#' if search value is empty
     }
     return `/search?query=${encodeURIComponent(searchValue.trim())}`;
   };
@@ -27,12 +36,34 @@ function Header() {
         <img src={logoDefault} alt="logoDefault" className='logo' />
       </Link>
       <div className="right-header">
-        <Link to= {`/`} className="item-link">
-            <h3 className={path === '/' ? 'active' : ''}>Home</h3>
+        <Link to="/" className="item-link">
+          <h3 className={path === '/' ? 'active' : ''}>Home</h3>
         </Link>
-        <h3 className={path.includes('movie') ? 'active' : ''}>Movies</h3>
-        <h3 className={path.includes('tv') ? 'active' : ''}>TV shows</h3>
-        <h3 className={path.includes('person') ? 'active' : ''}>People</h3>
+        <div className="item-header">
+          <h3 className={path.includes('movie') ? 'active' : ''}>Movies
+            <ul className="sub-header">
+              <li className="item-sub-header"><Link to="/movie/type/now-playing" className="item-link">Now Playing</Link></li>
+              <li className="item-sub-header"><Link to="/movie/type/popular" className="item-link">Popular</Link></li>
+              <li className="item-sub-header"><Link to="/movie/type/upcoming" className="item-link">Upcoming</Link></li>
+              <li className="item-sub-header"><Link to="/movie/type/top-rated" className="item-link">Top Rated</Link></li>
+            </ul>
+          </h3>
+          
+          <h3 className={path.includes('tv') ? 'active' : ''}>TV Series
+            <ul className="sub-header">
+              <li className="item-sub-header"><Link to="/tv/type/airing-today" className="item-link">Airing Today</Link></li>
+              <li className="item-sub-header"><Link to="/tv/type/popular" className="item-link">Popular</Link></li>
+              <li className="item-sub-header"><Link to="/tv/type/on-the-air" className="item-link">On The Air</Link></li>
+              <li className="item-sub-header"><Link to="/tv/type/top-rated" className="item-link">Top Rated</Link></li>
+            </ul>
+          </h3>
+          
+          <h3 className={path.includes('person') ? 'active' : ''}>People
+            <ul className="sub-header">
+              <li className="item-sub-header"><Link to="/person/type/popular" className="item-link">Popular</Link></li>
+            </ul>
+          </h3>
+        </div>
 
         <div className='search'>
           <input
@@ -41,6 +72,7 @@ function Header() {
             className="ip-search"
             value={searchValue}
             onChange={handleInputChange}
+            onKeyDown={handleKeyPress} 
           />
           <Link to={getSearchLink()}>
             <button className="btn-search">

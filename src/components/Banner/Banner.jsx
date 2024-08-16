@@ -23,22 +23,6 @@ const responsive = {
   }
 };
 
-const CustomLeftArrow = ({ onClick }) => {
-  return (
-    <button className="custom-arrow custom-left-arrow" onClick={onClick}>
-      &#9664;
-    </button>
-  );
-};
-
-const CustomRightArrow = ({ onClick }) => {
-  return (
-    <button className="custom-arrow custom-right-arrow" onClick={onClick}>
-      &#9654;
-    </button>
-  );
-};
-
 
 const Banner = ({data}) => {
 
@@ -50,11 +34,6 @@ const Banner = ({data}) => {
         autoPlaySpeed={5000}
         infinite={true} 
       >
-      {/* <Carousel
-      responsive={responsive}
-      customLeftArrow={<CustomLeftArrow />}
-      customRightArrow={<CustomRightArrow />} */}
-    {/* > */}
       {data && data.length > 0 && data.map((item) =>(
         <div
           key={item.id}
@@ -99,12 +78,7 @@ const Banner = ({data}) => {
   )
 }
 
-CustomLeftArrow.propTypes = {
-  onClick: PropTypes.func,
-};
-CustomRightArrow.propTypes = {
-  onClick: PropTypes.func,
-};
+
 
 Banner.propTypes = {
   data: PropTypes.array

@@ -15,7 +15,7 @@
     overflow-x: auto;
     overflow-y: hidden; 
     white-space: nowrap;
-    padding: 0 10px;
+    padding: 8px 0px 10px 10px;
 
 }
 
@@ -31,10 +31,7 @@
 
 }
 
-/* .wapper .item .img-cast{
-    
 
-} */
 
 .wapper-recommendation img,
 .wapper .item img {
@@ -52,28 +49,51 @@
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
     white-space: nowrap;
+    max-height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden; 
 }
+
 
 .wapper .cast-content h3 {
     text-transform: capitalize;
     margin: 0;
 }
 
+.re-content .re-name,
 .wapper .cast-name {
+    text-transform: capitalize;
     white-space: normal;
-    overflow-wrap: break-word; 
-
-    padding: 10px 10px;
+    overflow-wrap: break-word;
+    padding: 8px 10px;
     font-size: 15px;
     font-weight: 600;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    line-height: 1.6; 
 }
 
+
+.re-content .re-release,
 .wapper .cast-role {
+    white-space: normal;
+    overflow-wrap: break-word;
     font-size: 13px;
     font-weight: 400;
     padding: 0px 10px 10px;
-    white-space: normal; 
+    display: -webkit-box;
+    -webkit-line-clamp: 1; 
+    -webkit-box-orient: vertical;
+    overflow: hidden; 
+    text-overflow: ellipsis;
+    line-height: 1.6; 
 }
+
 
 .cast .wapper-recommendation::-webkit-scrollbar,
 .cast .wapper::-webkit-scrollbar {
@@ -91,10 +111,6 @@
     margin-top: 30px;
 }
 
-/* .trailer-container{
-    background-color: beige;
-    height: 400px;
-} */
 
 .wapper-recommendation .item{
     margin-bottom: 15px;
@@ -107,10 +123,8 @@
 
 .cast .wapper .item:hover,
 .wapper-recommendation .item:hover {
-    opacity: 1;
-    transform: scale(1.1);
+    transform: scale(1.05);
     transition: transform 0.5s ease-in-out;
-    
 
 }
 
@@ -124,29 +138,13 @@
 .re-content{
     width: 100%;
     margin: 0;
+    max-height: 55px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden; 
 }
 .item-link {
     text-decoration: none; 
   }
-
-.re-content .re-name{
-    white-space: normal;
-    overflow-wrap: break-word;
-    font-size: 16px;
-    font-weight: 500;
-    text-transform: capitalize;
-    margin: 0;
-    padding: 0 8px 8px;
-    
-
-}
-
-.re-content .re-release{
-    font-size: 13px;
-    font-weight: 400;
-    margin: 0;
-    padding: 0 8px 8px;
-    
-
-}
 
