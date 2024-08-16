@@ -1,7 +1,6 @@
 .banner-detail {
     position: relative;
     margin-top: 85px;
-    /* background-image: url('https://image.tmdb.org/t/p/original/m4TUa2ciEWSlk37rOsjiSIvZDXE.jpg'); */
     background-image: var(--background-image);
     width: 100%;
     background-repeat: no-repeat;
@@ -39,7 +38,7 @@
     height: 450px;
     overflow: hidden;
     border-radius: 8px;
-    background-image: url('/public/placeholder.png');
+    background-image: url('/placeholder.png');
     background-position: center;
     background-size: contain;
 

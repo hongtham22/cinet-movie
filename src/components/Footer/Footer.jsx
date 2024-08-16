@@ -80,9 +80,6 @@ function Footer() {
                 <a href="#">
                     <img src={instarIcon} alt="instar-icon" />
                 </a>
-              {/* <img src={fbIcon} alt="fb-icon" />
-              <img src={twitterIcon} alt="twitter-icon" />
-              <img src={instarIcon} alt="instar-icon" /> */}
             </li>
 
             <li className="item">

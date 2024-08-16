@@ -1,3 +1,4 @@
+
 .banner{
     margin: 50px 0px;
     background-image: url('../../assets/img/bg-new.png');
@@ -27,6 +28,8 @@
     /* align-items: center; */
     justify-content: center;
     gap: 30px;
+    transition: transform 0.5s linear;
+    
     
 }
 
@@ -106,7 +109,7 @@
   
   .view-icon {
     /* display: inline-block;  */
-    margin-right: 5px; /* Khoảng cách giữa icon và text */
+    margin-right: 5px; 
     width: 25px; 
     height: 25px;
     fill: #fff; 

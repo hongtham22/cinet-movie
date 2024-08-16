@@ -26,11 +26,11 @@ function Cast({ cast, recommendationMovie, trailerMovie, status}) {
       <h2>Top Billed Cast</h2>
       <div className="wapper">
         {cast && cast.length > 0 && cast.map((item) => (
-          <Link to={`/people/${item.id}`} key={item.id} className="item-link">
+          <Link to={`/person/${item.id}`} key={item.id} className="item-link">
             <div className="item">
               <img
                 src={`${import.meta.env.VITE_IMG_URL}${item.profile_path}`}
-                alt="imgCast"
+                onError={(e) => { e.target.onerror = null; e.target.src = '/public/placeholder.png'; }}
                 className='img-cast'
               />
               <div className="cast-content">
@@ -54,7 +54,7 @@ function Cast({ cast, recommendationMovie, trailerMovie, status}) {
             <div className="item">
               <img
                 src={`${import.meta.env.VITE_IMG_URL}${item.backdrop_path || item.poster_path}`}
-                alt="imgRe"
+                onError={(e) => { e.target.onerror = null; e.target.src = '/public/placeholder.png'; }}
                 className='img-re'
               />
               <div className="re-content">

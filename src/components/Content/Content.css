@@ -48,8 +48,8 @@
     transform: translateX(-50%);
     width: 100%;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.5); /* Thêm background màu đen trong suốt */
-    padding: 10px; /* Thêm padding để tạo khoảng cách giữa chữ và viền */
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 10px; 
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
 

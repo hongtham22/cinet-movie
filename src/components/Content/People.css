@@ -13,7 +13,7 @@
 .people-banner .left{
     width: 50%;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Tự động điều chỉnh số cột */
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
     row-gap: 30px; 
     column-gap: 20px; 
 
@@ -96,12 +96,3 @@
     font-weight: 400;
 }
 
-
-
-
-.btn {
-
-}
-.btn-view{
-
-}

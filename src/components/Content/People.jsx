@@ -8,7 +8,7 @@ function People({data}) {
         <div className="people-banner">
             <div className="left">
             {data && data.length > 0 && data.map((item) =>(
-              <Link to={`/people/${item.id}`} key={item.id} className="item-link">
+              <Link to={`/person/${item.id}`} key={item.id} className="item-link">
                 <div className="img-item">
                         <img src={`${import.meta.env.VITE_IMG_URL}${item.profile_path}`} alt="Spirited Away" />
                         <div className="content-img">
@@ -26,10 +26,11 @@ function People({data}) {
                 <h1>Trending People</h1>
                 <p>Explore the trending stars in the movie industry on Cinet. Stay informed about your favorite actors, directors, and filmmakers who are making waves in the world of cinema. Discover who&apos;s topping the charts and making headlines today.</p>
 
-
-                <button className="btn btn-people">
-                VIEW MORE
-                </button>
+                <Link to="/person/type/popular" className="item-link">
+                  <button className="btn btn-people">
+                  VIEW MORE
+                  </button>
+                </Link>
             </div>
         </div>
 

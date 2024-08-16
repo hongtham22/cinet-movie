@@ -1,0 +1,85 @@
+.movies-people-container{
+    border: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 8px;
+
+
+}
+
+.movies-people-container .item{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    padding: 10px;
+    /* border-bottom: 1px solid rgba(0,0,0,0.1); */
+    position: relative; /* Để sử dụng phần tử giả */
+
+}
+
+.movies-people-container .item::after {
+    content: '';
+    position: absolute;
+    left: 8px; 
+    right: 8px; 
+    bottom: 0;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.movies-people-container img {
+    background-position: center;
+    background-size: cover;
+    width: 40px;
+    height: 60px;
+    border: none; 
+  }
+.movies-people-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.movies-people-content .left-content {
+    flex-grow: 1; 
+}
+
+.movies-people-content .right-content {
+    margin: 0 20px;
+}
+
+.movies-people-content span{
+    margin-right: 4px ;
+
+}
+.movies-people-content p{
+    font-weight: 350;
+
+}
+
+.pagination{
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* gap: 20px */
+}
+
+button{
+    border: 1px solid #ddd;
+    padding: 8px 16px;
+    background-color: #fff;
+
+
+}
+.pagination button.active {
+    background-color: var(--bs-blue);
+    color: white;
+  }
+  
+  .pagination button:hover:not(.active) {background-color: #ddd;}
+
