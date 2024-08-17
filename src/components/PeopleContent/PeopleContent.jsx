@@ -73,8 +73,14 @@ const formatDate = (dateString) => {
 
       </div>
 
-      <ItemList items={movies} title="Movies" formatDate={formatDate} />
-      <ItemList items={tvShows} title="TV Series" formatDate={formatDate} />
+      {movies && movies.length > 0 &&(
+        <ItemList items={movies} title="Movies" formatDate={formatDate} />
+      )}
+
+      {tvShows && tvShows.length > 0 &&(
+        <ItemList items={tvShows} title="TV Series" formatDate={formatDate} />  
+      )}
+
     </div>
   )
 }

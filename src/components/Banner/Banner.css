@@ -79,6 +79,15 @@
     letter-spacing: 0.06em;
     line-height: 1.65;
     font-weight: 400;
+    text-transform: capitalize;
+    white-space: normal;
+    overflow-wrap: break-word;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    line-height: 1.6; 
 
 }
 

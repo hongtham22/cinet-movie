@@ -23,9 +23,11 @@ function Cast({ cast, recommendationMovie, trailerMovie, status}) {
 
   return (
     <div className='cast'>
+    {cast && cast.length > 0 && (
+      <>
       <h2>Top Billed Cast</h2>
       <div className="wapper">
-        {cast && cast.length > 0 && cast.map((item) => (
+        { cast.map((item) => (
           <Link to={`/person/${item.id}`} key={item.id} className="item-link">
             <div className="item">
               <img
@@ -41,31 +43,39 @@ function Cast({ cast, recommendationMovie, trailerMovie, status}) {
           </Link>
         ))}
       </div>
+      </>
+    )}
+
 
       <h2 className='trailer-h2'>Trailer</h2>
       <div className="trailer-container">
         <YouTube videoId={trailerMovie} opts={opts} />
       </div>
 
-      <h2 className="recommendation">Recommendations</h2>
-      <div className="wapper-recommendation">
-        {recommendationMovie && recommendationMovie.length > 0 && recommendationMovie.map((item) => (
-          <Link to={`/${status}/${item.id}`} key={item.id} className="item-link">
-            <div className="item">
-              <img
-                src={`${import.meta.env.VITE_IMG_URL}${item.backdrop_path || item.poster_path}`}
-                onError={(e) => { e.target.onerror = null; e.target.src = '/public/placeholder.png'; }}
-                className='img-re'
-              />
-              <div className="re-content">
-                <h3 className="re-name">{item.title || item.name}</h3>
-                <h3 className="re-release">{new Date(item.release_date).getFullYear()
-                                            || new Date(item.first_air_date).getFullYear()}</h3>
+    {recommendationMovie && recommendationMovie.length > 0 && (
+      <>
+        <h2 className="recommendation">Recommendations</h2>
+        <div className="wapper-recommendation">
+          {recommendationMovie.map((item) => (
+            <Link to={`/${status}/${item.id}`} key={item.id} className="item-link">
+              <div className="item">
+                <img
+                  src={`${import.meta.env.VITE_IMG_URL}${item.backdrop_path || item.poster_path}`}
+                  onError={(e) => { e.target.onerror = null; e.target.src = '/public/placeholder.png'; }}
+                  className='img-re'
+                />
+                <div className="re-content">
+                  <h3 className="re-name">{item.title || item.name}</h3>
+                  <h3 className="re-release">{new Date(item.release_date).getFullYear()
+                                              || new Date(item.first_air_date).getFullYear()}</h3>
+                </div>
               </div>
-            </div>
-          </Link>
-        ))}
-      </div>
+            </Link>
+          ))}
+        </div>
+      </>
+    )}
+      
     </div>
   );
 }
