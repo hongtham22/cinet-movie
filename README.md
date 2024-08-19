@@ -1,5 +1,8 @@
+# Description:
+Users can explore detailed information about popular movies, TV series and celebrities, such as trailers, revenue, votepoints... It provides a platform for users to view and search for their favorite movies and people effortlessly.
+# Deploy
+https://cinet-ckd.vercel.app/
 # PageSpeed Insight Result
-https://pagespeed.web.dev/analysis/https-cinet-ckd-vercel-app/nvkdo5sb0u?hl=vi&form_factor=desktop
 
 ![image](https://github.com/user-attachments/assets/689d19f3-db4c-48fa-8c12-9ea01b59d836)
 
