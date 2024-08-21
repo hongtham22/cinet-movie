@@ -24,7 +24,7 @@
     align-items: center;
 }
 
-h3 {
+.right-header h3 {
     position: relative;
     color: #000;
     font-size: 13px;
@@ -152,4 +152,63 @@ h3 {
     fill: var(--bs-yellow);
     stroke: var(--bs-yellow);
     stroke-width: 0.5;
+}
+
+
+/* PC */
+@media (min-width: 1024px) {
+
+}
+
+/* Tablet và Mobile */
+@media (max-width: 1023px) {
+
+
+    
+    .right-header h3,
+    .item-header {
+        display: none;
+        
+    }
+
+    
+}
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    .header{
+        padding: 10px 50px;
+    
+        }
+}
+
+
+/* Mobile */
+
+@media (max-width: 739px) {
+    .header{
+        padding: 0px 25px;
+        max-height: 60px;
+        }
+
+    .logo {
+        max-width: 90px;
+        height: 24px;
+    }
+    .ip-search {
+        padding: 4px;
+        border: none;
+        border-radius: 18px;
+        outline: none;
+        opacity: 0.3;
+    }
+    
+    .search-icon {
+        margin: 0 5px;
+        width: 15px; 
+        height: 15px;
+        fill: #000; 
+        stroke: #000;
+        stroke-width: 0.3;
+        transition: fill 0.3s, stroke 0.3s; 
+    }
 }

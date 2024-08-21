@@ -28,7 +28,7 @@
 }
 
 .content .img-item:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
     transition: transform 0.5s ease-in-out;
     border-radius: 12px;
 }
@@ -61,4 +61,56 @@
     font-weight: 600;
     color: #fff;
     text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
+}
+
+
+/* PC */
+@media (min-width: 1024px) {
+
+}
+
+/* Tablet và Mobile */
+@media (max-width: 1023px) {
+
+    
+}
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    
+    .content {
+        margin: 100px 30px;
+    }
+
+    .content .img-item {
+        width: 200px;
+        height: 300px;
+    }
+
+    
+}
+
+
+/* Mobile */
+
+@media (max-width: 739px) {
+    
+    .content {
+        margin: 60px 30px;
+    }
+
+
+    .content{
+    gap: 20px;
+
+    }
+
+    .content .img-item {
+        width: 150px;
+        height: 250px;
+    }
+
+    .content h2 {
+        font-size: 38px;
+    }
+
 }

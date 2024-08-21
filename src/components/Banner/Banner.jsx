@@ -70,7 +70,7 @@ const Banner = ({data}) => {
           </div>
       </div>
       ) )}
-      </Carousel>;
+      </Carousel>
 
         
 

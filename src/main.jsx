@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
 
+
+
 import {
   createBrowserRouter,
   RouterProvider,
@@ -14,6 +16,7 @@ import TvDetail from './pages/TvDetail/TvDetail.jsx';
 import PeopleDetail from './pages/PeopleDetail/PeopleDetail.jsx';
 import SearchPage from './pages/SearchPage/SearchPage.jsx';
 import HeaderItem from './pages/HeaderItem/HeaderItem.jsx';
+
 
 
 const router = createBrowserRouter([
