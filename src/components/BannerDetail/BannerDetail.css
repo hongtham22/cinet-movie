@@ -115,3 +115,63 @@
     font-size: 16px;
     font-weight: 400;
 }
+
+
+/* PC */
+@media (min-width: 1024px) {
+
+}
+
+/* Tablet và Mobile */
+@media (max-width: 1023px) {
+
+    .list-info-detail li{
+        font-size: 14px;
+        margin-right: 20px;
+    }
+    
+    .list-info-detail li::before {
+        right: -10px;
+        height: 15px;
+
+    }
+    .overview-content {
+        margin-bottom: 15px;
+        font-size: 14px;
+    }
+    .vote-info{
+        margin-bottom: 10px;
+    }
+    
+}
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    .banner-detail {
+        margin-top: 75px;
+        width: 100%;
+        padding: 50px 50px;
+        gap: 20px;
+
+    
+    }
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 739px) {
+    .banner-detail {
+        margin-top: 60px;
+        width: 100%;
+        padding: 30px 30px;
+        gap: 20px;
+    
+    }
+
+    .left-img{
+        display: none;
+    }
+
+
+}

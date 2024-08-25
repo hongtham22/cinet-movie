@@ -1,155 +1,311 @@
-
 .header {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    max-height: 90px;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 17px 150px;
-    background-color: #fff; 
-    z-index: 5000; 
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  max-height: 75px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 17px 125px;
+  background-color: #fff;
+  z-index: 5000;
 }
 
+.header .left-header {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .menu {
+  border: none;
+  padding: 0;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.header .navbar {
+  display: none;
+}
 .logo {
-    max-width: 110px;
-    height: 34px;
+  max-width: 110px;
+  height: 34px;
 }
 
 .right-header {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
-h3 {
-    position: relative;
-    color: #000;
-    font-size: 13px;
-    line-height: 1.2;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    font-weight: 600;
-    padding: 10px 0;
-    margin-right: 48px;
-    cursor: pointer;
+.right-header h3 {
+  position: relative;
+  color: #000;
+  font-size: 13px;
+  line-height: 1.2;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 10px 0;
+  margin-right: 48px;
+  cursor: pointer;
+}
+
+.right-header .arrow {
+  font-size: 10px;
 }
 
 .right-header h3.active::after,
 .right-header h3:hover::after {
-    height: 3px;
-    background: var(--bs-yellow);
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    transition: .33s;
+  height: 3px;
+  background: var(--bs-yellow);
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  transition: 0.33s;
 }
 
 /* (sub-header) */
 .item-header {
-    display: flex;
-    align-items: center;
-    position: relative;
+  display: flex;
+  align-items: center;
+  position: relative;
 }
 
 .sub-header {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: -30%;
+  background-color: #fff;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  min-width: 100px;
+  border-radius: 8px;
+  z-index: 6000;
+}
+
+.item-header h3:hover .sub-header {
+  display: block;
+}
+
+.sub-header li {
+  padding: 8px 15px;
+  white-space: nowrap;
+  text-transform: capitalize;
+  font-size: 15px;
+  font-weight: 350;
+  transition: transform 0.7s ease-in-out;
+}
+
+.sub-header li a {
+  color: #000;
+  text-decoration: none;
+}
+.header .sub-header .item-link {
+  font-size: 15px;
+  font-weight: 350;
+}
+
+.sub-header li:hover {
+  background-color: #f0f0f0;
+  transition: transform 0.7s ease-in-out;
+}
+
+.sub-header li:hover .item-link {
+  font-weight: 500;
+}
+
+.sub-header li:last-child:hover {
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+/* Tìm kiếm */
+.search {
+  display: flex;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.7);
+  border-radius: 18px;
+  align-items: center;
+}
+
+.ip-search {
+  padding: 7px;
+  border: none;
+  border-radius: 18px;
+  outline: none;
+  opacity: 0.3;
+}
+
+.ip-search:focus {
+  opacity: 1;
+}
+
+.btn-search {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  margin: 0 5px;
+  width: 18px;
+  height: 18px;
+  fill: #000;
+  stroke: #000;
+  stroke-width: 0.3;
+  transition: fill 0.3s, stroke 0.3s;
+}
+
+.search-icon:hover {
+  fill: var(--bs-yellow);
+  stroke: var(--bs-yellow);
+  stroke-width: 0.5;
+}
+
+.vertical-nav {
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  width: 250px;
+  height: 100vh;
+  background-color: #fff;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.5s ease-in-out;
+}
+.vertical-nav .item-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .vertical-nav .sub-header {
     display: none;
     position: absolute;
     top: 100%;
-    left: -30%;
+    left: 0;
     background-color: #fff;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
-    padding: 0;
     margin: 0;
     list-style: none;
     min-width: 100px;
     border-radius: 8px;
     z-index: 6000;
-}
-
-.item-header h3:hover .sub-header {
-    display: block;
-}
-
-.sub-header li {
-    padding: 8px 15px;
-    white-space: nowrap;
-    text-transform: capitalize;
-    font-size: 15px;
-    font-weight: 350;
-    transition: transform 0.7s ease-in-out;
-}
-
-.sub-header li a {
+  }
+  .vertical-nav .item-header h3 {
+    display: inline-block;
+    padding: 10px 60px;
     color: #000;
-    text-decoration: none;
-}
-.header .sub-header .item-link{
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+  }
+  .vertical-nav .arrow {
+    font-size: 14px;
+  }
 
+  .vertical-nav li {
+    display: inline-block;
+    list-style: none;
     font-size: 15px;
     font-weight: 350;
-}
-
-.sub-header li:hover {
-    background-color: #f0f0f0;
+    padding: 5px 60px;
+    width: 100%;
     transition: transform 0.7s ease-in-out;
+  }
 
-}
+  .vertical-nav a {
+    font-size: 16px;
+    font-weight: 350;
+    width: 100%;
+  }
 
-.sub-header li:hover .item-link{
+  .vertical-nav li:hover {
+    background-color: #ddd;
+    transition: transform 0.7s ease-in-out;
+  }
+  .vertical-nav li:hover a {
     font-weight: 500;
+  }
 
+  .vertical-nav .item-header h3:hover {
+    background-color: var(--bs-yellow);
+  }
+
+  .vertical-nav .item-header h3.active {
+    background-color: var(--bs-yellow);
+  }
+  .vertical-nav li:last-child{
+    width: 250px;
+  }
+
+/* PC */
+@media (min-width: 1024px) {
+    .vertical-nav{
+        display: none;
+    }
 }
 
-.sub-header li:last-child:hover {
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
-}
-/* Tìm kiếm */
-.search {
-    display: flex;
-    box-shadow: 0px 0px 4px rgba(0,0,0,0.7);
-    border-radius: 18px;
-    align-items: center;
+/* Tablet và Mobile */
+@media (max-width: 1023px) {
+  .header .navbar {
+    display: inline-flex;
+  }
+
+  .right-header h3,
+  .item-header {
+    display: none;
+  }
+
+
+ 
 }
 
-.ip-search {
-    padding: 7px;
-    border: none;
-    border-radius: 18px;
-    outline: none;
-    opacity: 0.3;
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+  .header {
+    padding: 0px 50px;
+  }
 }
 
-.ip-search:focus {
-    opacity: 1;
-}
+/* Mobile */
 
-.btn-search {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    display: flex;
-    align-items: center;
-}
+@media (max-width: 739px) {
+  .header {
+    padding: 0px 25px;
+    max-height: 60px;
+  }
 
-.search-icon {
+  .logo {
+    max-width: 90px;
+    height: 24px;
+  }
+  .ip-search {
+    padding: 4px;
+  }
+
+  .search-icon {
     margin: 0 5px;
-    width: 18px; 
-    height: 18px;
-    fill: #000; 
-    stroke: #000;
-    stroke-width: 0.3;
-    transition: fill 0.3s, stroke 0.3s; 
-}
+    width: 15px;
+    height: 15px;
+  }
+  .vertical-nav .item-header h3 {
+    padding: 10px 30px;
 
-.search-icon:hover {
-    fill: var(--bs-yellow);
-    stroke: var(--bs-yellow);
-    stroke-width: 0.5;
+  }
+
+
+  .vertical-nav li {
+    padding: 5px 30px;
+
+  }
 }

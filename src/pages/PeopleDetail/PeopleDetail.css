@@ -6,3 +6,35 @@
 
 }
 
+/* PC */
+@media (min-width: 1024px) {
+
+}
+
+/* Tablet và Mobile */
+@media (max-width: 1023px) {
+
+
+    
+}
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    .people-detail{
+        margin-top: 75px;
+        padding: 30px 50px;    
+    }
+}
+
+
+/* Mobile */
+
+@media (max-width: 739px) {
+    .people-detail{
+        margin-top: 60px;
+        padding: 30px 30px;
+        gap: 30px;
+        flex-direction: column;
+    
+    }
+
+}

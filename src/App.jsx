@@ -42,6 +42,7 @@ function App() {
           ↑
         </button>
       )}
+    {/* <button onClick={() => methodDoesNotExist()}>Break the world</button>; */}
   </>
   )
 }

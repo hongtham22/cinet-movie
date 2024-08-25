@@ -38,7 +38,7 @@
   
   .content-header .grid-item .grid-content {
     width: 180px;
-    height: 75px;
+    height: 73px;
     background-color: #fff;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
@@ -77,3 +77,55 @@
     margin: 0;
     padding: 0 8px 8px;
   }
+
+  /* PC */
+@media (min-width: 1024px) {
+
+}
+
+/* Tablet và Mobile */
+@media (max-width: 1023px) {
+
+
+    
+}
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+  .content-header .container-header .grid-header {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+}
+
+
+/* Mobile */
+
+@media (max-width: 739px) {
+  .content-header .container-header .grid-header {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .content-header .grid-item .grid-img {
+    width: 150px; 
+    height: 200px; 
+    object-fit: cover; 
+  }
+  
+  .content-header .grid-item .grid-content {
+    width: 150px;
+    height: 63px;
+    background-color: #fff;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    padding-top: 10px;
+    padding-left: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    overflow: hidden; 
+
+  }
+
+}

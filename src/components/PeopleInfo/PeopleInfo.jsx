@@ -25,6 +25,7 @@ function PeopleInfo({ people }) {
 
   return (
     <div className="people-info">
+       <h1 className='name'>{people.name}</h1>
       <div className="img-cast">
         <img src={`${import.meta.env.VITE_IMG_URL}${people.profile_path}`} alt="img-people" />
       </div>
@@ -67,6 +68,7 @@ function PeopleInfo({ people }) {
 
 PeopleInfo.propTypes = {
   people: PropTypes.shape({
+    name: PropTypes.string,
     profile_path: PropTypes.string,
     known_for_department: PropTypes.string,
     gender: PropTypes.number,

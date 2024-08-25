@@ -51,3 +51,29 @@
     cursor: default;
 }
 
+
+
+/* PC */
+@media (min-width: 1024px) {
+
+}
+
+/* Tablet và Mobile */
+@media (max-width: 1023px) {
+
+
+    
+}
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 739px) {
+.detail-info{
+    display: none;
+}
+}

@@ -14,12 +14,12 @@ const Content = ({ title, content, data, status }) => {
           slidesToSlide: 2 
         },
         tablet: {
-          breakpoint: { max: 1024, min: 464 },
+          breakpoint: { max: 1024, min: 740 },
           items: 3,
           slidesToSlide: 2 
         },
         mobile: {
-          breakpoint: { max: 464, min: 0 },
+          breakpoint: { max: 739, min: 0 },
           items: 2,
           slidesToSlide: 1 
         }

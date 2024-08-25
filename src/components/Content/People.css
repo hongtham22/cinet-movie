@@ -13,7 +13,8 @@
 .people-banner .left{
     width: 50%;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
+    /* grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));  */
+    grid-template-columns: repeat(2, 1fr); 
     row-gap: 30px; 
     column-gap: 20px; 
 
@@ -22,9 +23,8 @@
 
 .people-banner .img-item {
     position: relative;
-    width: 250px;
+    width: 210px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
-    /* box-shadow: 0 0 10px #707070 ; */
     opacity: 0.9;
     transition: transform 0.5s ease-in-out;
     border-radius: 8px;
@@ -33,7 +33,7 @@
 
 .people-banner .img-item img{
     width: 100%;
-    height: 180px;
+    height: 170px;
     display: block;
     object-fit: cover;
     background-color: #fff;
@@ -63,7 +63,7 @@
 
 .people-banner .img-item:hover {
     opacity: 1;
-    transform: scale(1.1);
+    transform: scale(1.05);
     transition: transform 0.5s ease-in-out;
 
 }
@@ -96,3 +96,88 @@
     font-weight: 400;
 }
 
+/* PC */
+@media (min-width: 1024px) {
+
+}
+
+/* Tablet và Mobile */
+@media (max-width: 1023px) {
+
+
+    
+}
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    .people-banner{
+        padding: 80px 30px;
+        gap: 30px;
+    
+    }
+    
+    .people-banner .left{
+        width: 50%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        row-gap: 30px; 
+        column-gap: 20px; 
+    
+    }
+    
+    
+    .people-banner .img-item {
+        width: 170px;
+        
+    }
+    
+    .people-banner .img-item img{
+        height: 150px;
+    }
+    
+    .people-banner .content-img {
+        padding: 3px;
+    }
+    
+    .people-banner .name-people {
+        font-size: 10px;
+    }
+
+    .people-banner .right {
+        min-width: 300px;
+    
+    }
+    
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 739px) {
+
+    .people-banner{
+        padding: 30px 30px;
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 40px;
+    
+    }
+    .people-banner .right {
+        gap: 20px;
+        align-items: center;
+    }
+    .people-banner .right  p{
+        font-size: 16px;
+    }
+
+    .people-banner .left{
+        width: 100%;
+        grid-template-columns: repeat(1, 1fr); 
+        row-gap: 30px; 
+        justify-items: center; 
+        align-items: center; 
+    }
+
+   
+
+}
