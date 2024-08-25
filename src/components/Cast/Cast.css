@@ -1,6 +1,7 @@
 .cast {
     max-width: 75%;
     width: 100%; 
+    position: relative;
 }
 
 .cast h2 {
@@ -148,6 +149,24 @@
     text-decoration: none; 
   }
 
+  .trailer-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+    margin-bottom: 20px;
+}
+
+.trailer-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 
   /* PC */
 @media (min-width: 1024px) {
@@ -162,12 +181,73 @@
 }
 /* Tablet */
 @media (min-width: 740px) and (max-width: 1023px) {
+    .cast .wapper .item {
+        margin-bottom: 10px;
+        width: 110px; 
+    }
+    
+    
+    
+    .wapper-recommendation img,
+    .wapper .item img {
+        width: 110px;
+        height: 150px; 
+    }
 
+    .wapper-recommendation .item{
+        margin-bottom: 15px;
+        width: 200px;
+    
+    }
+    
+    
+    .wapper-recommendation img{
+        width: 200px;
+        max-height: 110px;
+    
+    }
+    
+    
+    
+    
 }
 
 
 /* Mobile */
 
 @media (max-width: 739px) {
+    .cast{
+        max-width: 100%;
+    }
+    .cast .wapper,
+    .cast .wapper-recommendation{
 
+        gap: 15px;
+
+    }
+      .cast .wapper .item {
+        margin-bottom: 10px;
+        width: 90px; 
+    }
+    
+    
+    
+    .wapper-recommendation img,
+    .wapper .item img {
+        width: 90px;
+        height: 110px; 
+    }
+
+    .wapper-recommendation .item{
+        margin-bottom: 15px;
+        width: 150px;
+    }
+    
+    
+    .wapper-recommendation img{
+        width: 150px;
+        max-height: 90px;
+    
+    }
+    
 }

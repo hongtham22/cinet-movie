@@ -73,5 +73,7 @@
 /* Mobile */
 
 @media (max-width: 739px) {
-
+.detail-info{
+    display: none;
+}
 }
